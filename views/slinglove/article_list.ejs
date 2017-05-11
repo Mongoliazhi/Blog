@@ -1,0 +1,55 @@
+<%- include singlove_header.ejs%>
+<div class="row">
+    <div class="col-md-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb panel">
+            <li><a href="/slinglove/index"><i class="fa fa-book"></i> 文章管理</a></li>
+            <li class="active">文章列表</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="timeline">
+            <article class="timeline-item alt">
+                <div class="text-right">
+                    <div class="time-show first">
+                        <a href="#" class="btn btn-primary">Today</a>
+                    </div>
+                </div>
+            </article>
+
+            <% for(var i=0;i<study_li.length;i++) {%>
+            <% if(i%2==0) {%>
+            <article class="timeline-item ">
+                <div class="timeline-desk">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <span class="arrow"></span>
+                            <span class="timeline-icon"></span>
+                            <h1 class="red"><%= study_li[i].study_author%> &nbsp;<span  class="text-success"><%= study_li[i].study_time%></span></h1>
+                            <p><%= study_li[i].study_title%></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <%}else{%>
+            <article class="timeline-item alt">
+                <div class="timeline-desk">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <span class="arrow-alt"></span>
+                            <span class="timeline-icon"></span>
+                            <h1 class="red"><%= study_li[i].study_author%>&nbsp;<span class="text-success"><%= study_li[i].study_time%></span></h1>
+                            <p><%= study_li[i].study_title%></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <%}%>
+            <% }%>
+        </div>
+    </div>
+</div>
+<%- include slinglove_footer.ejs%>

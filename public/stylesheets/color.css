@@ -1,0 +1,152 @@
+/*home界面 swiper样式*/
+.swiper-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    width: 100%;
+    height:100%;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.sun_p1{
+    position: absolute;
+    left: 20%;
+    top:20%;
+    width: 10rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun_p2{
+    position: absolute;
+    left: 20%;
+    top:25%;
+    width: 10rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun_img{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+.sun_he{
+    position: absolute;
+    top:30%;
+    left: 20%;
+    width: 10rem;
+    height: 12rem;
+    border-radius:1rem;
+    overflow: hidden;
+}
+
+
+.sun1{
+    position: absolute;
+    left: 20%;
+    top:20%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun2{
+    position: absolute;
+    left: 20%;
+    top:25%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun3{
+    position: absolute;
+    left: 20%;
+    top:30%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun4{
+    position: absolute;
+    left: 20%;
+    top:35%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun5{
+    position: absolute;
+    left: 20%;
+    top:40%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun6{
+    position: absolute;
+    left: 20%;
+    top:45%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun7{
+    position: absolute;
+    left: 20%;
+    top:50%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun8{
+    position: absolute;
+    left: 20%;
+    top:55%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun9{
+    position: absolute;
+    left: 20%;
+    top:60%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.sun10{
+    position: absolute;
+    left: 20%;
+    top:65%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
+
+
+.blue1{
+    background-color: #DEEBF7;
+}
+.yellow1{
+    background-color: #fff;
+}
+
+.breadcrumb{
+
+}
+.breadcrumb li{
+    float: left;
+}
+.breadcrumb a{
+    color: orange;
+}
+.breadcrumb .active{
+
+}

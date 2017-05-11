@@ -1,0 +1,105 @@
+*{
+    margin:0 auto;
+    box-sizing: border-box;
+}
+input:not([type="button"]){
+    outline:none;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+html{
+    font-size: 16px;;
+    width: 100%;
+    height: 100%;
+}
+body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("../images/login_bg.jpg") no-repeat;
+    background-size:100% 100%;
+    overflow: auto;
+}
+
+/*登录*/
+.login{
+    position:relative;
+    width: 100%;
+    max-width: 30rem;
+    background: rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 2rem;
+    top: 20%;
+}
+.login_p{
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-family: cursive;
+}
+.login_p span{
+    font-size: 1.5rem;
+}
+.user_p{
+    color: #e04444;
+    margin-top: .5rem;
+}
+.username_span1,.username_span2,.password_span1,.password_span2{display: none;}
+
+
+/*.login p span{*/
+    /*font-size: 1.5rem;*/
+    /*font-family: cursive;*/
+/*}*/
+.login form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.login_div{
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+}
+.login_div img{
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    width:1.4rem;
+}
+.login_div input{
+    width: 100%;
+    height: 3rem;
+    border:none;
+    border-radius: 5px;
+    padding-left: 4rem;
+    color: #666;
+}
+.login_div input:hover{
+    border:1.5px solid #1AB394;
+    box-shadow: #00b7ee;
+}
+.login_div input[type="button"]{
+    border:none;
+    background-color: #1AB394;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 0;
+    color: #ffffff;
+}
+.login_right{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 10rem;
+}
+
+
+
+
+@media screen and (max-width:640px){
+    html{
+        font-size: 12px;
+    }
+    .login{
+        width: 90%;
+    }
+}

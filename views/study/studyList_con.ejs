@@ -1,0 +1,28 @@
+<%- include ../header%>
+<div class="content">
+    <div class="content_left">
+        <div class="container">
+           <p class="datas" style=""><%= newsList_id%></p>
+            <div id="newsList_id"></div>
+        </div>
+        <%- include comment.ejs%>
+    </div>
+
+    <%- include ../contentRight%>
+</div>
+
+
+<script>
+    $(function(){
+        var datas=$(".datas").html();
+        $.ajax({
+            type: 'POST',
+            url: "/study/studyList_con",
+            data:"newsList_id="+datas,
+            success: function(data){
+                $("#newsList_id").append(data);
+            }
+        })
+    })
+</script>
+<%- include ../footer%>

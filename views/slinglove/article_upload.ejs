@@ -1,0 +1,94 @@
+<%- include singlove_header.ejs%>
+<div class="row">
+    <div class="col-md-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb panel">
+            <li><a href="/slinglove/index"><i class="fa fa-book"></i> 文章管理</a></li>
+            <li class="active">文章上传</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                请编辑你的文章，点击上传
+            </header>
+            <div class="panel-body">
+                <form method="post" enctype="multipart/form-data" >
+                    <div class="form-group">
+                        <label for="exampleInputFile">文章分类</label>
+                        <select class="form-control m-bot15" id="study_name">
+                            <option>CSS</option>
+                            <option>HTML</option>
+                            <option>React_Native</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">上传标题</label>
+                        <input type="text" class="form-control" id="study_title" placeholder="请编辑您的标题">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">文章介绍</label>
+                        <textarea rows="3" class="form-control" id="study_sketch" placeholder="请编辑您的文章介绍"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label ">上传时间</label>
+                        <input size="16" type="text" value="2012-06-15 14:45" id="study_time" class="form_datetime form-control">
+
+                    </div>
+
+                    <!--<div class="form-group">-->
+                        <!--<label for="exampleInputFile">上传标题图片</label>-->
+                        <!--<div class="">-->
+                            <!--<input type="file" name="file" id="study_img">-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <div class="form-group">
+                            <label for="exampleInputFile">上传内容</label>
+                        <div id="summernote">
+
+                        </div>
+                    </div>
+                    <!--<button type="submit">提交</button>-->
+                </form>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: "500px",
+            callbacks: {
+                onImageUpload: function(files) { //the onImageUpload API
+                    img = sendFile(files[0]);
+                }
+            }
+        });
+    });
+
+    function sendFile(file) {
+        data = new FormData();
+        data.append("file", file);
+        console.log(data);
+        $.ajax({
+            data: data,
+            type: "POST",
+            url: "/slinglove/article_upload",
+            dataType : "html",
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(url) {
+                console.log(url)
+                $("#summernote").summernote('insertImage', url, 'image name'); // the insertImage API
+            }
+        });
+    }
+</script>
+<%- include slinglove_footer.ejs%>

@@ -1,0 +1,126 @@
+/*产品展示*/
+.product{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    overflow: auto;
+}
+.product_bg{
+    width: 100%;
+    height: 20rem;
+}
+.product_bg img{
+    width: 100%;
+    height: 20rem;
+}
+
+.ccc{
+    width: 100%;
+    overflow: auto;
+}
+.product_list{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 20rem;
+    padding: 10px 3rem;
+}
+.product_con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.product_img{
+    width: 100%;
+    height: 100%;
+}
+.product_img img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.product_bgcon{
+    position: absolute;
+    width: 92%;
+    height: 90%;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,.3);
+    text-align: center;
+    left: 5%;
+    top: 4%;
+    padding: 0.5rem 1rem;
+}
+
+.pro_top{
+    width: 100%;
+    height: 55%;
+    border-bottom: 1px dotted #ccc;
+}
+.pro_top_list{
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+}
+.pro_top_list img{
+    width: 100%;
+    height: 100%;
+}
+
+.pro_btm{
+    position: relative;
+    width: 100%;
+    height: 40%;
+}
+.pro_btm_p{
+    font-size: 0.8rem;
+    text-align: justify;
+    text-indent: 2rem;
+    margin: 1rem 0;
+}
+
+.productList{
+    width:100%;
+}
+.product_ul{
+    display: inline-block;
+}
+.product_ul li{
+    font-size:1.2rem;
+    width: 100px;
+    float: left;
+    margin: 1rem .5rem;
+}
+
+.newsList_footer{
+    height: 2rem;
+    line-height: 2rem;
+    position: absolute;
+    bottom: 15px;
+    width: 65%;
+}
+.newsList_footer span{
+    float: left;
+    display: inline-block;
+    margin-right: 2rem;
+}
+.newsList_footer span img{
+    width: 1.5rem;
+    vertical-align: middle;
+}
+.newsList_footer span i{}
+.newsList_footer button{
+    float: right;
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #57D0FF;
+
+}
+.newsList_footer button a{
+    color: #fff;
+}

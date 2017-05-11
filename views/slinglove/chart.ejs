@@ -1,0 +1,88 @@
+<%- include singlove_header.ejs%>
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Area Chart
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+            </header>
+            <div class="panel-body">
+                <div id="visitors-chart">
+                    <div id="visitors-container" style="width: 100%;height:300px; text-align: center; margin:0 auto;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Real Time Chart
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+            </header>
+            <div class="panel-body">
+                <div id="reatltime-chart">
+                    <div id="reatltime-chartContainer" style="width:100%;height:300px; text-align: center; margin:0 auto;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <section class="panel">
+            <header class="panel-heading">
+                Pie Chart
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+            </header>
+            <div class="panel-body">
+                <div id="pie-chart" class="pie-chart">
+                    <div id="pie-chartContainer" style="width: 100%;height:400px; text-align: left;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col-sm-6">
+        <section class="panel">
+            <header class="panel-heading">
+                Donut Chart
+                        <span class="tools pull-right">
+                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+                            <a href="javascript:;" class="fa fa-times"></a>
+                         </span>
+            </header>
+            <div class="panel-body">
+                <div id="pie-chart-donut" class="pie-chart">
+                    <div id="pie-donutContainer" style="width: 100%;height:400px; text-align: left;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- jQuery Flot Chart-->
+<script src="../../slinglove/js/flot-chart/jquery.flot.js"></script>
+<script src="../../slinglove/js/flot-chart/jquery.flot.tooltip.js"></script>
+<script src="../../slinglove/js/flot-chart/jquery.flot.resize.js"></script>
+<script src="../../slinglove/js/flot-chart/jquery.flot.pie.resize.js"></script>
+<script src="../../slinglove/js/flot-chart/jquery.flot.selection.js"></script>
+<script src="../../slinglove/js/flot-chart/jquery.flot.stack.js"></script>
+<script src="../../slinglove/js/flot-chart/jquery.flot.time.js"></script>
+<script src="../../slinglove/js/main-chart.js"></script>
+
+<%- include slinglove_footer.ejs%>

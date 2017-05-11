@@ -1,0 +1,203 @@
+<%- include header%>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="../or/swiper/love.jpg" alt="">
+            <!--<p style="color: #B41E20" class="ani sun_p1" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="2s" swiper-animate-delay="1s">执子之手</p>-->
+            <!--<p style="color: #B41E20" class="ani sun_p2" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">与子偕老</p>-->
+            <!--<p class="ani sun_he" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="1s">-->
+                <!--<img src="../or/swiper/he.jpg" alt="">-->
+            <!--</p>-->
+            <p class="ani sun_img" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="2s" swiper-animate-delay="1s">
+                <img src="../or/swiper/down.png" alt="">
+            </p>
+        </div>
+        <div class="swiper-slide">
+            <img src="../or/swiper/qqmusic.jpg" alt="">
+            <p class="ani sun1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">够钟死心了</p>
+            <p class="ani sun2" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1s">当你沉默得高调</p>
+            <p class="ani sun3" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">当得我力劫低潮</p>
+            <p class="ani sun4" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1s">当你沉默得高调</p>
+            <p class="ani sun5" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">为何尚要骚扰</p>
+            <p class="ani sun6" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1s">过几多通宵</p>
+            <p class="ani sun7" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">至肯醒觉才愿退烧</p>
+            <p class="ani sun8" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1s">爱不了</p>
+            <p class="ani sun9" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">却偏走不了</p>
+            <p class="ani sun10" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1s">没救了</p>
+            <p class="ani sun_img" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="2s" swiper-animate-delay="1s">
+                <img src="../or/swiper/down.png" alt="">
+            </p>
+        </div>
+        <!--<div class="swiper-slide">-->
+            <!--<img src="../or/swiper/a2.jpg" alt="">-->
+            <!--<p class="ani sun1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">今天你要嫁给我</p>-->
+
+        <!--</div>-->
+        <!--<div class="swiper-slide">-->
+            <!--<img src="../or/swiper/a3.jpg" alt="">-->
+            <!--<p class="ani sun1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">今天你要嫁给我</p>-->
+
+        <!--</div>-->
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="content">
+    <div class="content_left">
+        <div class="container container_1" style="">
+            <h1 id="newsList_num" style="display: none"><%= newsList_num[0].NumberOfOrders %></h1>
+            <p class="nav_p">文章列表</p><br>
+            <ul class="newsList">
+            </ul>
+            <div id="page"></div>
+            <script src="../javascripts/jquery.pagination.min.js"></script>
+            <script>
+                var newsList_num=$("#newsList_num").html();
+                $(function(){
+                    //分页
+                    var pageIndex = 1;     //页面索引初始值
+                    var pageSize = 3;      //页面个数
+                    InitTable(pageIndex);
+                    $("#page").pagination({
+                        totalData:newsList_num,
+                        jump: true,
+                        current:pageIndex,
+                        showData:pageSize,
+                        keepShowPN:true,
+                        callback:function(api){
+                            var a=api.getCurrent();
+                            console.log(a);
+                            InitTable(a);
+                        }
+                    })
+                    function InitTable(pageIndex){
+                        $.ajax({
+                            type:'POST',
+                            url:'/home',
+//                           data:'imgLove_num='+imgLove_num&'newsList_id='+ newsList_id,
+                            data:{
+                                pageIndex:pageIndex,
+                                pageSize:pageSize
+                            },
+//                            连接成功成功得到三个以内的数组
+                            success: function (newsList) {
+//                                console.log(newsList);
+                                $(".newsList").html("");
+                                var html=""
+                                for(var i=0;i<newsList.length;i++){
+                                    html+='<li>' +
+                                        '<p class="newsList_id" style="display: none">'+newsList[i].id+'</p>' +
+                                        '<img class="newsImg" src="../images/news.png" alt="">' +
+                                        '<img class="newsList_img" src="../images/' +
+                                        newsList[i].study_img+
+                                        '" alt="">' +
+                                        '<div class="newsList_div">' +
+                                        '<p class="newsList_divP">'+newsList[i].study_title+'</p>' +
+                                        '<span class="newsList_divS">'+newsList[i].study_sketch+'</span>' +
+                                        '<div class="newsList_footer">' +
+                                        '<span><img src="../images/time.png" alt=""><i>'+ newsList[i].study_time+'</i></span>' +
+                                        '<span><img src="../images/read.png" alt=""><i>'+ newsList[i].study_reading+'</i></span>' +
+                                        '<span><img class="img_love" src="../images/fabulous.png" alt=""><i>'+ newsList[i].study_love+'</i></span>' +
+                                        '<button  type="button"><a href="/study/studyList_con?newsList_id=' +
+                                        newsList[i].id+
+                                        '">阅读全文</a></button></div></div></li>'
+//                                    '<button  type="button"><a href="/study/studyList_con?newsList_id="+'newsList[i].id '+'"'>阅读全文</a></button></div></div></li>'
+                                }
+                                $(".newsList").append(html)
+//                                img_love();
+                            }
+                        })
+                    }
+
+                    //点赞
+                    $(document).on("click",".img_love",function(){
+                        var newsList_id=$(this).parent().parent().parent().parent().children(".newsList_id").html();
+                        var imgLove_num=parseInt($(this).next().html());
+                        if($(this).attr("src")=="../images/fabulous.png"){
+                            $(this).attr("src","../images/fabulous_1.png");
+                            imgLove_num++;
+                            $(this).next().html(imgLove_num);
+                        }else {
+                            $(this).attr("src","../images/fabulous.png");
+                            imgLove_num--;
+                            $(this).next().html(imgLove_num);
+                        }
+                        $.ajax({
+                            type:'POST',
+                            url:'/homeimg',
+//                           data:'imgLove_num='+imgLove_num&'newsList_id='+ newsList_id,
+                            data:{
+                                newsList_id:newsList_id,
+                                imgLove_num:imgLove_num
+                            },
+                            success: function (data) {
+                                console.log(data);
+                            }
+                        })
+                    })
+
+
+                    //newsList_divS限制字数
+
+                })
+            </script>
+        </div>
+        <div class="container">
+            <div class="nav">
+                <p class="nav_p">最新文章</p>
+                <ul class="nav_ul">
+                    <!--<li>-->
+                    <!--<span>2016年12月 2日 » </span>-->
+                    <!--<a href="">User space 与 Kernel space</a>-->
+                    <!--</li>-->
+                    <% for(var i=0;i<newsList.length;i++){%>
+                    <li>
+                        <span><%= newsList[i].study_time%>»</span>
+                        <a href="/study/studyList_con?newsList_id=<%= newsList[i].id%>" ><%= newsList[i].study_title%></a>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <%- include contentRight%>
+    <!--<div class="product">-->
+        <!--<p class="nav_p">react+node测试区</p>-->
+        <!--<div class="product_bg"><img src="../images/wine.png" alt=""></div>-->
+        <!--<%- include product/public/index.ejs %>-->
+    <!--</div>-->
+</div>
+
+
+
+<script src="../or/swiper/swiper-3.4.1.jquery.min.js"></script>
+<script src="../or/swiper/swiper.animate1.0.2.min.js"></script>
+<script>
+    $(function(){
+        var mySwiper = new Swiper('.swiper-container', {
+
+            autoplay: 10000,//可选选项，自动滑动
+            autoplayDisableOnInteraction : false,
+            pagination : '.swiper-pagination',//分页器
+
+            keyboardControl : true,//现在键盘上的 < 和 > 可以控制Swiper
+            onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                swiperAnimateCache(swiper); //隐藏动画元素
+                swiperAnimate(swiper); //初始化完成开始动画
+            },
+            onSlideChangeEnd: function(swiper){
+                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            },
+        })
+
+    })
+</script>
+
+
+
+
+
+
+<%- include footer%>

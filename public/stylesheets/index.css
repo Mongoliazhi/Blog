@@ -1,0 +1,226 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: Georgia, serif;
+    /*background: url("../public/images/bg3.jpg") no-repeat;*/
+    background-image: url("../images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+input,textarea{
+    -webkit-appearance: none;
+}
+.right{
+    float: right;
+}
+
+
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background: #ff5db1;*/
+    /*background: -moz-linear-gradient(-45deg, #ff5db1 0%, rgba(0, 87, 137, 0.7) 100%);*/
+    /*!*background: -webkit-gradient(left top, right bottom, color-stop(0%, #ff5db1), color-stop(100%, rgba(0, 87, 137, 0.7)));*!*/
+    /*background: -webkit-linear-gradient(-45deg, #ff5db1 0%, rgba(0, 87, 137, 0.7) 100%);*/
+    /*background: -o-linear-gradient(-45deg, #ff5db1 0%, rgba(0, 87, 137, 0.7) 100%);*/
+    /*background: -ms-linear-gradient(-45deg, #ff5db1 0%, rgba(0, 87, 137, 0.7) 100%);*/
+    /*background: linear-gradient(135deg, #ff5db1 0%, rgba(0, 87, 137, 0.7) 100%);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#005789', GradientType=1 );*/
+    /**/
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    max-width: 1200px;
+    /*border:1px solid #fff;*/
+}
+.header_img1{
+    height: 3rem;
+    float: left;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+}
+.header_img2{
+    display: none;
+    height: 3rem;
+    float: right;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+}
+/*隐藏右侧栏*/
+.header_right{
+    position: fixed;
+    right: -10rem;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    z-index: 20;
+}
+.bg_header_right{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+}
+.header_right_ul{
+    margin-top: 2rem;
+    padding: 0;
+    position: relative;
+    z-index: 21;
+}
+.header_right_ul li{
+    margin: 1rem;
+}
+.header_right_ul li img{
+    width: 1.5rem;
+    vertical-align: bottom;
+    margin-right: 1rem;
+}
+.header_right_ul li a{
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+
+.header_ul{
+    float: left;
+}
+.header_ul li{
+    float: left;
+    margin: 0 1.5rem;
+}
+.header_ul li a{
+    color:#fff;
+    font-size: 1.4rem;
+    opacity: 0.2;
+}
+.header_ul li a:hover{
+    opacity: 1;
+}
+
+
+.homeFrom{
+    position: absolute;
+    width: 100%;
+    max-width: 40rem;
+    height: 20rem;
+    padding: 2rem;
+    left: 50%;
+    margin-left: -20rem;
+    top: 50%;
+    margin-top: -10rem;
+}
+.bg_home{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 10px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.con_home{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.home_header {
+    color:#fff;
+    margin-bottom: 2rem;
+}
+.home_header p{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+.home{
+    width: 100%;
+    height: 2.5rem;
+}
+.home_input{
+    width: 90%;
+    float: left;
+    background-color: transparent;
+    color: #eee;
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    border: 1px solid #fff;
+    border-radius: 5px 0 0 5px;
+    height: 2.5rem;
+}
+.home_btn{
+    width: 10%;
+    float: left;
+    border: none;
+    background-color: #ffffff;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+}
+
+.home_keyword{
+    position: relative;
+    z-index: 1;
+    margin-top: 0.3rem;
+}
+.home_keyword span{
+    display: inline-block;
+    margin-right: 0.25rem;
+    color: #fff;
+}
+.home_keyword span a{
+    color: #fff;
+    margin-right: 0.25rem;
+}
+
+
+@media screen and (max-width:640px){
+    html{
+        font-size: 12px;
+    }
+    .header_ul{
+        display: none;
+    }
+    .bg_home{
+        display: none;
+    }
+    .homeFrom{
+        left: 0;
+        margin-left: 0;
+    }
+    .home_input{
+        width: 80%;
+    }
+    .home_btn{
+        width: 20%;
+    }
+    .header_img2{
+        display: block;
+    }
+}

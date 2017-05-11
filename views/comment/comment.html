@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mongoliazhi</title>
+    <style>
+        *{margin: 0 auto;
+        box-sizing: border-box;}
+        body{
+            font-family: Georgia, serif;
+        }
+        #comment{
+            overflow: auto;
+            margin-top:50px;
+            width: 100%;
+            max-width: 1000px;
+            padding: 0 0 30px;
+            border: 1px solid #CCCCCC;
+        }
+        .comment_p{
+            padding: 20px;
+            font-size: 42px;
+            font-weight: bold;
+        }
+        .comment_con{
+            padding:0 30px;
+        }
+        .comment_li{
+            overflow: auto;
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .comm_firstdiv{
+            overflow: auto;
+        }
+        .comment_son{
+            width: 95%;
+            margin-left: 5%;
+        }
+        .comment_title{
+            margin-top: 10px;
+            text-indent: 2rem;
+            text-align: justify;
+        }
+        .comment_userimg{
+            width: 40px;
+            height:40px;
+            vertical-align: middle;
+        }
+        .comment_user{
+            margin-left: 20px;
+        }
+        .comment_time{
+            float: right;
+        }
+        .sub_comment{
+
+            cursor: pointer;
+        }
+
+
+        .submit{
+            overflow: auto;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .submit_text{
+            display: block;
+            float: right;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .submit_btn{
+            float: right;
+            font-size: 18px;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            border:none;
+            border-radius: 8px;
+            background-color: #00b7ee;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="comment">
+        <p class="comment_p">留言</p>
+        <div class="comment_con">
+            <div class="comment_li">
+                <div class="comm_firstdiv">
+                    <div><img class="comment_userimg" src="../../public/images/M.png" alt=""><span class="comment_user">Monolia 说:</span></div>
+                    <div class="comment_title">内容都很多，就拿选择器来说，CSS选择器大概可以分为五类： 元素选择器 关系选择器 属性选择器 伪类选择器 伪对象选择器 元素选择器 选择器...</div>
+                    <div><span class="comment_time">2017年4月24日 18:29 | <i class="sub_comment">#</i> | 引用</span></div>
+                </div>
+                <div class="comment_son">
+                    <div class="comm_firstdiv">
+                        <div><img class="comment_userimg" src="../../public/images/M.png" alt=""><span class="comment_user">陈冠希 说:</span></div>
+                        <div class="comment_title">在js中，循环引用会造成内存泄漏吗？比如：window.m = a; a = b; b = c; c = a; abc是三角恋关系，如果解除m对a的引用，abc的引用计数都为1，那abc会被回收掉吗。先前看过
+                            有关Node.js垃圾回收的文章，垃圾回收会stop the world，并且从树的root节点开始遍历，触及不到的变量就会被回收，这一点似乎和引用计数有些不一样，js对于循环引用的情况又是如何解决的？</div>
+                        <div><span class="comment_time">2017年4月24日 18:29 | <i class="sub_comment">#</i> | 引用</span></div>
+                    </div>
+                    <div class="comment_son">
+                        <div class="comm_firstdiv">
+                            <div><img class="comment_userimg" src="../../public/images/M.png" alt=""><span class="comment_user">陈冠希 说:</span></div>
+                            <div class="comment_title">在js中，循环引用会造成内存泄漏吗？比如：window.m = a; a = b; b = c; c = a; abc是三角恋关系，如果解除m对a的引用，abc的引用计数都为1，那abc会被回收掉吗。先前看过
+                                有关Node.js垃圾回收的文章，垃圾回收会stop the world，并且从树的root节点开始遍历，触及不到的变量就会被回收，这一点似乎和引用计数有些不一样，js对于循环引用的情况又是如何解决的？</div>
+                            <div><span class="comment_time">2017年4月24日 18:29 | <i class="sub_comment">#</i> | 引用</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--<div class="comment_li">-->
+                <!--<div class="comm_firstdiv">-->
+                    <!--<div><img class="comment_userimg" src="../../public/images/M.png" alt=""><span class="comment_user">陈冠希 说:</span></div>-->
+                    <!--<div class="comment_title">在js中，循环引用会造成内存泄漏吗？比如：window.m = a; a = b; b = c; c = a; abc是三角恋关系，如果解除m对a的引用，abc的引用计数都为1，那abc会被回收掉吗。先前看过-->
+                        <!--有关Node.js垃圾回收的文章，垃圾回收会stop the world，并且从树的root节点开始遍历，触及不到的变量就会被回收，这一点似乎和引用计数有些不一样，js对于循环引用的情况又是如何解决的？</div>-->
+                    <!--<div><span class="comment_time">2017年4月24日 18:29 | <i class="sub_comment">#</i> | 引用</span></div>-->
+                <!--</div>-->
+                <!--<div class="comment_son">-->
+                    <!--<div class="comm_firstdiv">-->
+                        <!--<div><img class="comment_userimg" src="../../public/images/M.png" alt=""><span class="comment_user">李连杰 说:</span></div>-->
+                        <!--<div class="comment_title">内容都很多，就拿选择器来说，CSS选择器大概可以分为五类： 元素选择器 关系选择器 属性选择器 伪类选择器 伪对象选择器 元素选择器 选择器...</div>-->
+                        <!--<div><span class="comment_time">2017年4月24日 18:29 | <i class="sub_comment"><i class="sub_comment">#</i></i> | 引用</span></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="comment_li">
+                <div class="comm_firstdiv">
+                    <div><img class="comment_userimg" src="../../public/images/M.png" alt=""><span class="comment_user">李连杰 说:</span></div>
+                    <div class="comment_title">内容都很多，就拿选择器来说，CSS选择器大概可以分为五类： 元素选择器 关系选择器 属性选择器 伪类选择器 伪对象选择器 元素选择器 选择器...</div>
+                    <div><span class="comment_time">2017年4月24日 18:29 | <i class="sub_comment">#</i> | 引用</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="submit">-->
+    <!--<textarea class="submit_text" name="text" rows="10" cols="50"></textarea>-->
+    <!--<button class="submit_btn">提交</button>-->
+    <!--</div>-->
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $(".sub_comment").click(function (event){
+                var i = $(this).parent().parent().parent().find('div[class=submit]').length;
+                if(i > 0){
+                    $(this).parent().parent().parent().find('div[class=submit]').remove();
+                }else{
+                    html='<div class="submit"><textarea class="submit_text" name="text" rows="10" cols="50"></textarea><button class="submit_btn">提交</button></div>'
+                    $(this).parent().parent().parent().append(html);
+                }
+
+            })
+        })
+    </script>
+</body>
+</html>

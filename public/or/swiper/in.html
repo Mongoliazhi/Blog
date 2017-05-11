@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="swiper-3.4.1.min.css">
+    <link rel="stylesheet" href="animate.min.css">
+    <style>
+        .swiper-slide img{
+            width: 100%;
+        }
+        .ani{
+            position: relative;
+        }
+        .ani_h3{
+            position: absolute;
+            top:100%;
+            left: 10px;
+        }
+        .ani_p{
+            position: absolute;
+            top:100%;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+            <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                <img src="a2.jpg" alt="">
+                <h3 class="ani_h3">回调函数，初始化后执行。回调函数，初始化后执行。</h3>
+                <p class="ani_p">如果以上这些效果不能满足你的需求，你可以仿照animate.css的格式制作一些其他效果，加到你自己的css文件。
+                    其他参数：transition-timing-function 。
+                    网友贡献：可以执行两种动画的swiper.animate-twice和可在loop模式下使用的 animateControl。
+                    作业：使用插件快速仿制腾讯节气微场景。还可将作业提交到Swiper论坛，获得积分换取其他优秀作品。
+                </p>
+            </p>
+        </div>
+        <div class="swiper-slide">
+            <p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                <img src="a2.jpg" alt="">
+            </p>
+        </div>
+        <div class="swiper-slide">
+            <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                <img src="a3.jpg" alt="">
+
+            </p>
+        </div>
+        <div class="swiper-slide">
+            <p class="ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                <img src="a1.jpg" alt="">
+            </p>
+        </div>
+        <div class="swiper-slide">
+            <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                <img src="a1.jpg" alt="">
+            </p>
+        </div>
+        <div class="swiper-slide">
+            <p class="ani" swiper-animate-effect="hinge" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                <img src="a1.jpg" alt="">
+            </p>
+        </div>
+        <div class="swiper-slide">
+            <p class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                <img src="a1.jpg" alt="">
+            </p>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="swiper-3.4.1.jquery.min.js"></script>
+<script src="swiper.animate1.0.2.min.js"></script>
+<script>
+    $(function(){
+        var mySwiper = new Swiper('.swiper-container', {
+            onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                swiperAnimateCache(swiper); //隐藏动画元素
+                swiperAnimate(swiper); //初始化完成开始动画
+                $(".ani_h3").animate({
+                    "top":'10%',
+                },2000)
+                $(".ani_p").animate({
+                    "top":'20%',
+                },2000)
+            },
+            onSlideChangeEnd: function(swiper){
+                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            },
+
+
+//            autoplay: 4000,//可选选项，自动滑动
+            touchRatio : 0.5,
+            autoplayDisableOnInteraction : false,
+            pagination : '.swiper-pagination',//分页器
+            paginationClickable :true,
+            keyboardControl : true,//现在键盘上的 < 和 > 可以控制Swiper
+        })
+    })
+</script>
+</body>
+</html>

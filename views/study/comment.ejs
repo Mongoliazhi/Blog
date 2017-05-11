@@ -1,0 +1,58 @@
+<div id="comment" >
+    <p class="comment_p">留言</p>
+
+    <div class="submit">
+    <textarea class="submit_text" name="text" rows="10" cols="50"></textarea>
+    <button class="submit_btn">提交</button>
+    </div>
+    <div class="comment_con">
+
+    </div>
+</div>
+
+<script src="../javascripts/comment.js"></script>
+<script>
+    $(function(){
+        var datas=$(".datas").html();
+        console.log(datas)
+        $.ajax({
+            type: 'GET',
+            url: "/comment",
+            data:"comment_id="+datas,
+            success: function(data){
+                console.log(data);
+                var html="";
+                for(var i=0;i<data.length;i++){
+                    html+='<div class="comment_li"> <div class="comm_firstdiv"> <div><img class="comment_userimg" src="../images/'+data[i].user_img+'" alt="">' +
+                        '<span class="comment_user">'+data[i].name+' 说:</span></div><div class="comment_title">'+data[i].content+'</div><div>' +
+                        '<span class="comment_time">'+data[i].comment_time+' | <i class="sub_comment">#</i> | 引用</span></div> </div> </div>'
+
+                }
+                $(".comment_con").append(html)
+            }
+        })
+
+
+//        $(".sub_comment").click(function (event){
+//            var i = $(this).parent().parent().parent().find('div[class=submit]').length;
+//            if(i > 0){
+//                $(this).parent().parent().parent().find('div[class=submit]').remove();
+//            }else{
+//                html='<div class="submit"><textarea class="submit_text" name="text" rows="10" cols="50"></textarea><button class="submit_btn">提交</button></div>'
+//                $(this).parent().parent().parent().append(html);
+//            }
+//
+//        })
+//        $(".comment_con").on('click','.sub_comment',function () {
+//            var i = $(this).parent().parent().parent().find('div[class=submit]').length;
+//            if(i > 0){
+//                $(this).parent().parent().parent().find('div[class=submit]').remove();
+//            }else{
+//                html='<div class="submit"><textarea class="submit_text" name="text" rows="10" cols="50"></textarea><button class="submit_btn">提交</button></div>'
+//                $(this).parent().parent().parent().append(html);
+//            }
+//        })
+    })
+</script>
+
+

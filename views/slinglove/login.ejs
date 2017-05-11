@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Mongolia</title>
+    <link rel="stylesheet" href="../stylesheets/slinglove.css">
+</head>
+<body>
+    <div class="login">
+        <form>
+            <p class="login_p">Mongolia<span>管理员登录</span></p>
+            <div class="login_div">
+                <img src="../images/key.png" alt="">
+                <input type="text" name="username" placeholder="用户名" class="username">
+                <p class="user_p">
+                    <span class="username_span1">* 请输入您的用户名</span>
+                    <span class="username_span2">* 请输入正确的用户名</span>
+
+                </p>
+            </div>
+            <div class="login_div">
+                <img src="../images/people1.png" alt="">
+                <input type="password" name="password" placeholder="密码" class="password">
+                <p class="user_p">
+                    <span class="password_span1">* 请输入您的密码</span>
+                    <span class="password_span2">* 您输入的密码不对！</span>
+                </p>
+            </div>
+            <div class="login_div">
+                <input type="button" class="login_btn" value="登   录">
+            </div>
+            <!--<img class="ware_line" src="images/wave_line.png" alt="">-->
+        </form>
+    </div>
+
+    <a href="/home"><img class="login_right" src="../images/mongolia.png" alt=""></a>
+    <script src="../javascripts/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".login_btn").click(function () {
+                var username=$(".username").val();
+                var password=$(".password").val();
+
+                if(!username){
+                    $(".username_span1").show();
+
+                }else{
+                    $(".username_span1").hide();
+                    $(".username_span2").hide();
+                }
+
+                if(!password){
+                    $(".password_span1").show();
+                }else{
+                    $(".password_span1").hide();
+                    $(".password_span2").hide();
+                }
+
+                if(username && password){
+                    $.ajax({
+                        type: "POST",
+                        url: "/slinglove/login",
+                        data:{
+                            username:username,
+                            password:password
+                        },
+                        success:function(data){
+                            if(data == 1){
+                                $(".username_span2").show();
+                            }
+                            else if(data == 2){
+                                $(".password_span2").show();
+                            }else if(data == 3){
+                                window.location="/slinglove/index"
+                            }
+                        }
+
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+</html>
