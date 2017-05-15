@@ -3,6 +3,16 @@ $(function(){
         var top = $(this).scrollTop(); // 当前窗口的滚动距离
     });
 
+    document.onreadystatechange = subSomething;//当页面加载状态改变的时候执行这个方法.
+    function subSomething() {
+        // alert("1232123")
+        if (document.readyState == "complete") //当页面加载状态
+        {
+            console.log("页面加载完成！")
+        }
+    }
+
+
 //   header中右导航栏
     $(".header_img2").click(function(event){
         event.stopPropagation();

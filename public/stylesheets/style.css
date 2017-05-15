@@ -135,11 +135,14 @@ header{
 .content{
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     overflow: hidden;
-    background-color:#fff;
+    background-color:#F5F5F5;
     padding: 2rem 0;
     border-radius: 8px 8px 0 0;
+}
+.content_1200{
+    max-width: 1200px;
 }
 .content_left{
     width: 75%;
@@ -167,12 +170,39 @@ header{
     /*box-shadow: 7px 7px 5px #ccc;*/
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 4px 10px rgba(0, 0, 0, 0.06);
     background-color: #fff;
-    padding: 15px;
+    padding: 1rem;
     /*border-radius: 8px 8px 0 0;*/
     border-radius: 8px;
     /*overflow: hidden;*/
     margin-bottom: 3rem;
+
 }
+/*.newsList li:hover{*/
+    /*nimation:mymove 1s infinite;*/
+    /*-webkit-animation:mymove 1s  1 alternate forwards;*/
+
+/*}*/
+/*@keyframes mymove1*/
+/*{*/
+    /*from { padding: 2rem;}*/
+    /*to { padding: 1rem;}*/
+/*}*/
+/*@-webkit-keyframes mymove1 !*Safari and Chrome*!*/
+/*{*/
+    /*from { padding: 2rem;}*/
+    /*to { padding: 1rem;}*/
+/*}*/
+/*@keyframes mymove*/
+/*{*/
+    /*from { padding: 1rem;}*/
+    /*to { padding: 2rem;}*/
+/*}*/
+/*@-webkit-keyframes mymove !*Safari and Chrome*!*/
+/*{*/
+    /*from { padding: 1rem;}*/
+    /*to { padding: 2rem;}*/
+/*}*/
+
 .newsImg{
     position: absolute;
     width: 2rem;
@@ -366,6 +396,14 @@ header{
     display: inline-block;
     border-bottom: 1px solid #333;
 }
+
+
+/*视频展示*/
+.video_list{
+    
+}
+
+
 /*React产品展示*/
 #container{
     position: relative;
@@ -394,7 +432,6 @@ header{
 .product_ul li{
     font-size: 1.2rem;
 }
-
 
 
 
