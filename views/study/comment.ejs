@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<script src="../javascripts/comment.js"></script>
+<!--<script src="../javascripts/comment.js"></script>-->
 <script>
     $(function(){
         var datas=$(".datas").html();
@@ -20,7 +20,7 @@
             url: "/comment",
             data:"comment_id="+datas,
             success: function(data){
-                console.log(data);
+//                console.log(data);
                 var html="";
                 for(var i=0;i<data.length;i++){
                     html+='<div class="comment_li"> <div class="comm_firstdiv"> <div><img class="comment_userimg" src="../images/'+data[i].user_img+'" alt="">' +

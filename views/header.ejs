@@ -7,6 +7,7 @@
     <title>Mongolia</title>
     <link rel="shortcut icon" href="../images/M.png">
     <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/slinglove.css">
     <link rel="stylesheet" href="../stylesheets/comment.css">
 
 
@@ -25,8 +26,9 @@
         <a href="/home"><img class="header_img1" src="../images/mongolia.png" alt=""></a>
         <ul class="header_ul">
             <!--<li><a href="#" style="opacity: 1">Blog</a></li>-->
-            <li><a href="/my">关于我</a></li>
+            <li><a href="/my">My</a></li>
             <li><a href="/react">React</a></li>
+            <li><a  class="login_login">登录</a ></li>
         </ul>
         <img class="header_img2"  src="../images/menu1.png" alt="">
         <ol class="nav_icon">
@@ -42,7 +44,46 @@
     <div class="bg_header_right"></div>
     <ul class="header_right_ul">
         <li><img src="../images/home.png" alt=""><a href="/">首页</a></li>
+        <li><img src="../images/people.png" alt=""><a href="/my">My</a></li>
         <li><img src="../images/blog.png" alt=""><a href="/home">Blog</a></li>
-        <li><img src="../images/people.png" alt=""><a href="/my">关于我</a></li>
+        <li><img src="../images/react.png" alt=""><a href="/React">React</a></li>
+        <li><img src="../images/login.png" alt=""><a  class="login_login">>登录</a></li>
     </ul>
+</div>
+
+<div class="login_bg">
+    <div class="login login_background">
+        <form>
+            <p class="login_p1">勉强登录下呗。。。</p>
+            <div class="login_div">
+                <img src="../images/key.png" alt="">
+                <input type="text" name="username" placeholder="用户名" class="username">
+                <p class="user_p">
+                    <span class="username_span1">* 请输入您的用户名</span>
+                    <span class="username_span2">* 请输入正确的用户名</span>
+
+                </p>
+            </div>
+            <div class="login_div">
+                <img src="../images/people1.png" alt="">
+                <input type="password" name="password" placeholder="密码" class="password">
+                <p class="user_p">
+                    <span class="password_span1">* 请输入您的密码</span>
+                    <span class="password_span2">* 您输入的密码不对！</span>
+                </p>
+            </div>
+            <div class="login_div">
+                <p class="login_zc">注册</p>
+                <p class="login_wj_pass">忘记密码？</p>
+            </div>
+            <div class="login_div">
+                <input type="button" class="login_btn" value="登   录">
+            </div>
+            <div class="login_div">
+                <p class="login_zc">第三方登录   <a href="">QQ登录</a></p>
+                <p class="login_wj_pass"></p>
+            </div>
+            <!--<img class="ware_line" src="images/wave_line.png" alt="">-->
+        </form>
+    </div>
 </div>

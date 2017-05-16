@@ -12,7 +12,7 @@ html{
     height: 100%;
 }
 body{
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 100%;
     background: url("../images/login_bg.jpg") no-repeat;
@@ -21,19 +21,41 @@ body{
 }
 
 /*登录*/
+.login_bg{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 10;
+}
 .login{
-    position:relative;
+    position: absolute;
     width: 100%;
     max-width: 30rem;
-    background: rgba(255,255,255,.2);
+    background: rgba(255,255,255,.3);
     border: 1px solid rgba(255,255,255,.3);
     padding: 2rem;
     top: 20%;
+    left: 50%;
+    margin-left: -240px;
+
+}
+.login_background{
+    background: rgba(255,255,255,.9);
 }
 .login_p{
     color: #ffffff;
     font-size: 2.5rem;
     font-family: cursive;
+}
+.login_p1{
+    color: #000;
+    font-size: 1.8rem;
+    font-family: cursive;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 .login_p span{
     font-size: 1.5rem;
@@ -57,7 +79,8 @@ body{
 .login_div{
     position: relative;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
+    overflow: auto;
 }
 .login_div img{
     position: absolute;
@@ -68,7 +91,7 @@ body{
 .login_div input{
     width: 100%;
     height: 3rem;
-    border:none;
+    border: 1px solid #ccc;
     border-radius: 5px;
     padding-left: 4rem;
     color: #666;
@@ -91,6 +114,15 @@ body{
     bottom: 2rem;
     width: 10rem;
 }
+.login_zc{
+    float: left;
+    color: #666666;
+}
+.login_wj_pass{
+    float: right;
+    color: #666666;
+    border-bottom: 1px solid #666;
+}
 
 
 
@@ -101,5 +133,7 @@ body{
     }
     .login{
         width: 90%;
+        left: 5%;
+        margin-left: 0;
     }
 }

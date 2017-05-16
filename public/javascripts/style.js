@@ -12,6 +12,12 @@ $(function(){
         }
     }
 
+    //登录界面弹出
+    $(".login_login").click(function () {
+        $(".login_bg").animate({
+            "top":"0"
+        },500)
+    })
 
 //   header中右导航栏
     $(".header_img2").click(function(event){
