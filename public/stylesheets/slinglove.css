@@ -36,11 +36,11 @@ body{
     max-width: 30rem;
     background: rgba(255,255,255,.3);
     border: 1px solid rgba(255,255,255,.3);
-    padding: 2rem;
+    padding: 2rem 2rem 1rem;
     top: 20%;
     left: 50%;
     margin-left: -240px;
-
+    border-radius: 1rem;
 }
 .login_background{
     background: rgba(255,255,255,.9);
@@ -71,6 +71,24 @@ body{
     /*font-size: 1.5rem;*/
     /*font-family: cursive;*/
 /*}*/
+.login_close{
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    border:none;
+    font-size: 3rem;
+    background-color: coral;
+    -webkit-transition:0.4s ease-in;
+    transition:0.5s ease-in;
+}
+.login_close:hover{
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+}
 .login form{
     position: relative;
     width: 100%;
@@ -82,7 +100,7 @@ body{
     margin: 0.5rem 0;
     overflow: auto;
 }
-.login_div img{
+.login_div_img{
     position: absolute;
     top: 0.8rem;
     left: 1rem;
@@ -123,8 +141,24 @@ body{
     color: #666666;
     border-bottom: 1px solid #666;
 }
+.login_ul3{
+    width: 100%;
 
-
+}
+.login_ul3 li{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding: 1rem;
+}
+.login_ul3 li img{
+    display: block;
+    width: 4rem;
+    margin-bottom: 0.5rem;
+}
+.login_ul3 li span{
+    color: #666;
+}
 
 
 @media screen and (max-width:640px){

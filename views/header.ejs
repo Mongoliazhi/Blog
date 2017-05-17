@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Mongolia</title>
     <link rel="shortcut icon" href="../images/M.png">
-    <link rel="stylesheet" href="../stylesheets/style.css">
     <link rel="stylesheet" href="../stylesheets/slinglove.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+
+
     <link rel="stylesheet" href="../stylesheets/comment.css">
-
-
 
     <link rel="stylesheet" href="../or/swiper/swiper-3.4.1.min.css">
     <link rel="stylesheet" href="../or/swiper/animate.min.css">
@@ -53,10 +53,11 @@
 
 <div class="login_bg">
     <div class="login login_background">
+        <button class="login_close" type="button">×</button>
         <form>
             <p class="login_p1">勉强登录下呗。。。</p>
             <div class="login_div">
-                <img src="../images/key.png" alt="">
+                <img class="login_div_img" src="../images/key.png" alt="">
                 <input type="text" name="username" placeholder="用户名" class="username">
                 <p class="user_p">
                     <span class="username_span1">* 请输入您的用户名</span>
@@ -65,7 +66,7 @@
                 </p>
             </div>
             <div class="login_div">
-                <img src="../images/people1.png" alt="">
+                <img   class="login_div_img" src="../images/people1.png" alt="">
                 <input type="password" name="password" placeholder="密码" class="password">
                 <p class="user_p">
                     <span class="password_span1">* 请输入您的密码</span>
@@ -80,8 +81,20 @@
                 <input type="button" class="login_btn" value="登   录">
             </div>
             <div class="login_div">
-                <p class="login_zc">第三方登录   <a href="">QQ登录</a></p>
-                <p class="login_wj_pass"></p>
+                <ul class="login_ul3">
+                    <li>
+                        <img src="../images/qq.png" alt="">
+                        <span>QQ</span>
+                    </li>
+                    <li>
+                        <img src="../images/wechat.png" alt="">
+                        <span>微信</span>
+                    </li>
+                    <li>
+                        <img src="../images/weibo.png" alt="">
+                        <span>微博</span>
+                    </li>
+                </ul>
             </div>
             <!--<img class="ware_line" src="images/wave_line.png" alt="">-->
         </form>

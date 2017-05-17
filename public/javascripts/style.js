@@ -18,6 +18,11 @@ $(function(){
             "top":"0"
         },500)
     })
+    $(".login_close").click(function () {
+        $(".login_bg").animate({
+            "top":"-100%"
+        },500)
+    })
 
 //   header中右导航栏
     $(".header_img2").click(function(event){

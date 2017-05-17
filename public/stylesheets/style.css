@@ -13,8 +13,9 @@ body{
     width: 100%;
     font-family: Georgia, serif;
     background-color:#F5F5F5;
+    background:none;
     /*background-color:#F9F0E0;*/
-    /*!*background: url("../public/images/bg3.jpg") no-repeat;*!*/
+    /*background: url("../public/images/bg3.jpg") no-repeat;*/
     /*background-image: url("../public/images/bg1.jpg");*/
     /*background-repeat: no-repeat;*/
     /*background-size: cover;*/
@@ -402,6 +403,24 @@ header{
 .video_list{
     padding: 1rem;
 }
+
+
+/*demo*/
+/*demo  tree*/
+.tree{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #000;
+    font-family: Courier;
+    text-align: center;
+    overflow: auto;
+}
+#tree_canvas{
+    background-color: #000;
+    cursor: pointer;
+}
+
 
 
 /*React产品展示*/
