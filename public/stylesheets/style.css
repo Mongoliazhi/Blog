@@ -403,13 +403,15 @@ header{
 .video_list{
     padding: 1rem;
 }
-
+.video_list video{
+    width: 100%;
+}
 
 /*demo*/
 /*demo  tree*/
 .tree{
     width: 100%;
-    padding: 0;
+    padding: 1rem;
     margin: 0;
     background: #000;
     font-family: Courier;
