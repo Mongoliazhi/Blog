@@ -124,3 +124,10 @@
 .newsList_footer button a{
     color: #fff;
 }
+
+
+@media screen and (max-width:640px){
+    .product_list{
+        width:100%;
+    }
+}

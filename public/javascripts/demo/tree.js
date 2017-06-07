@@ -410,8 +410,9 @@
         var a=false;
         $(window).bind("scroll", function () {
             var top = $(this).scrollTop(); // 当前窗口的滚动距离
+            console.log(top)
             if(!a){
-                if(top>1700){
+                if(top>1300){
                     init();
                     a=true;
                 }

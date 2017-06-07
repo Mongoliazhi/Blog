@@ -139,8 +139,11 @@ header{
     /*max-width: 1200px;*/
     overflow: hidden;
     background-color:#F5F5F5;
-    padding: 2rem 0;
+    padding: 2rem 0 15rem;
     border-radius: 8px 8px 0 0;
+    background-image: url("../images/tao.png");
+    background-size:60%;
+    background-repeat:no-repeat;
 }
 .content_1200{
     max-width: 1200px;
