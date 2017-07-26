@@ -5,7 +5,7 @@
     <textarea class="submit_text" name="text" rows="10" cols="50"></textarea>
     <button class="submit_btn">提交</button>
     </div>
-    <div class="comment_con">
+    <div id="comment_con">
 
     </div>
 </div>
@@ -15,20 +15,67 @@
     $(function(){
         var datas=$(".datas").html();
         console.log(datas)
+
+        var jsonData=null;
+        function transData(a, idStr, pidStr, chindrenStr) {
+            var r = [], hash = {}, id = idStr, pid = pidStr, children = chindrenStr, i = 0, j = 0,
+                len = a.length;
+            for (; i < len; i++) {
+                hash[a[i][id]] = a[i];
+            }
+            for (; j < len; j++) {
+                var aVal = a[j], hashVP = hash[aVal[pid]];
+                if (hashVP) {
+                    !hashVP[children] && (hashVP[children] = []);
+                    hashVP[children].push(aVal);
+                } else {
+                    r.push(aVal);
+                }
+            }
+            return r;
+        }
+
         $.ajax({
             type: 'GET',
             url: "/comment",
             data:"comment_id="+datas,
             success: function(data){
-//                console.log(data);
-                var html="";
-                for(var i=0;i<data.length;i++){
-                    html+='<div class="comment_li"> <div class="comm_firstdiv"> <div><img class="comment_userimg" src="../images/'+data[i].user_img+'" alt="">' +
-                        '<span class="comment_user">'+data[i].name+' 说:</span></div><div class="comment_title">'+data[i].content+'</div><div>' +
-                        '<span class="comment_time">'+data[i].comment_time+' | <i class="sub_comment">#</i> | 引用</span></div> </div> </div>'
 
+                jsonData =eval(data);
+                console.log(jsonData);
+                var jsonDataTree = transData(jsonData, 'comment_id', 'pid', 'chindren');
+                console.log(jsonDataTree)
+                var make = true;
+                var makeTree = function (parentObj, treeJson, isA) {
+                    if(make){
+                        var Obj = $("<div class='comment_con'></div>");
+                    }else{
+                        var Obj = $("<div class='comment_son'></div>");
+                    }
+                    make = false;
+
+                    for(var i = 0;i<treeJson.length;i++){
+                        var childHtml = "<div class='comment_li'>";
+
+                        var aHtml= '<div class="comm_firstdiv">' +
+                            '<div><img class="comment_userimg" src="../images/'+treeJson[i].user_img+'" alt="">' +
+                            '<span class="comment_user">'+ treeJson[i].name +' 说:</span></div><div class="comment_title">'+ treeJson[i].content +'</div>' +
+                            '<div><span class="comment_time">'+ treeJson[i].comment_time +' | <i class="sub_comment">#</i> | 引用</span></div></div>'
+                        childHtml += aHtml;
+                        childHtml += "</div>";
+
+                        var childObj = $(childHtml);
+                        if (treeJson[i].chindren != null && treeJson[i].chindren.length > 0) {
+                            makeTree(childObj, treeJson[i].chindren);
+                        }
+                        $(Obj).append(childObj);
+                    }
+                    $(parentObj).append($(Obj));
                 }
-                $(".comment_con").append(html)
+
+                var parentObj = $("#comment_con");
+                var a = makeTree($(parentObj), jsonDataTree);
+
             }
         })
 

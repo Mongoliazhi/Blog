@@ -117,11 +117,16 @@ module.exports = function(app){
     app.post('/home',function(req,res){
         var pageIndex=req.body.pageIndex;
         var pageSize=req.body.pageSize;
-        db.query('select id,study_img,study_title,study_sketch,study_author,study_time,study_reading,study_love from study limit '+((pageIndex-1)*pageSize+1)+','+pageSize+'',function(err,rows){
+        console.log("VVVVVVVVVVVVVVVVV")
+        console.log(pageIndex+","+pageSize)
+
+        db.query('select id,study_img,study_title,study_sketch,study_author,study_time,study_reading,study_love from study limit '+((pageIndex-1)*pageSize)+','+pageSize+'',function(err,rows){
             if(err){
                 console.log(err);
             }else{
+                console.log("YYYYYYYYYYYYYYYYYYYYY")
                 res.send(rows);
+                console.log(rows)
             }
         })
     })
@@ -154,7 +159,18 @@ module.exports = function(app){
         })
 
     })
-        //文章内容
+    //Love
+    app.get('/love/love',function(req,res){
+
+        res.render("love/love",{
+            study:req.session.study,
+            // newsList_id:newsList_id
+        })
+
+    })
+
+
+    //文章内容
     app.get('/study/studyList_con',function(req,res){
         var newsList_id=(req.query.newsList_id);
         res.render("study/studyList_con",{
@@ -177,10 +193,11 @@ module.exports = function(app){
     })
     //文章评论
     app.get('/comment',function (req,res) {
-        var pid=0;
+
         var passage_id=(req.query.comment_id)
 
-        db.query('SELECT comment.passage_id,comment.pid,comment.user_id,comment.content,comment.comment_time,user.name,user.user_img FROM comment LEFT JOIN user ON user.id=comment.user_id WHERE passage_id='+passage_id+' AND pid='+pid+' ORDER BY comment_time DESC',function(err,rows){
+        // db.query('SELECT comment.passage_id,comment.pid,comment.user_id,comment.content,comment.comment_time,user.name,user.user_img FROM comment LEFT JOIN user ON user.id=comment.user_id WHERE passage_id='+passage_id+' AND pid='+pid+' ORDER BY comment_time DESC',function(err,rows){
+        db.query('SELECT comment.passage_id,comment.comment_id,comment.pid,comment.user_id,comment.content,comment.comment_id,comment.comment_time,user.name,user.user_img FROM comment LEFT JOIN user ON user.id=comment.user_id WHERE passage_id='+passage_id+' ORDER BY comment_time DESC',function(err,rows){
             if(err){
                 console.log(err)
             }else{

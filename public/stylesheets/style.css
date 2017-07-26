@@ -110,6 +110,7 @@ header{
 }
 .header_ul li a:hover{
     opacity: 1;
+    font-size: 1.6rem;
 }
 
 /*图标导航*/
@@ -152,6 +153,9 @@ header{
     width: 75%;
     height: 100%;
     float: left;
+    background-color: #fff;
+    opacity: 0.9;
+    border-radius: 8px;
 }
 .container{
     padding-left: 1rem;

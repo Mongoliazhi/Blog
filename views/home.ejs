@@ -34,8 +34,8 @@
 
 
 <div class="content">
-    <div class="content_1200">
-        <div class="content_left">
+    <div class="content_1200" >
+        <div class="content_left" style="background-color: transparent">
             <div class="container container_1" style="">
                 <h1 id="newsList_num" style="display: none"><%= newsList_num[0].NumberOfOrders %></h1>
                 <p class="nav_p">文章列表</p><br>
@@ -73,7 +73,7 @@
                                 },
 //                            连接成功成功得到三个以内的数组
                                 success: function (newsList) {
-//                                console.log(newsList);
+                                console.log(newsList);
                                     $(".newsList").html("");
                                     var html=""
                                     for(var i=0;i<newsList.length;i++){
