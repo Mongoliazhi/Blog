@@ -1,10 +1,562 @@
+
 <%- include ../header%>
-    <!--<script src="../love.js"></script>-->
-    <h1>Love</h1>
-    <div style="background:#2684C2;width:100%; height:500px"><strong>雪花</strong></div>
-    <div class="love_content">
-        <h1>I'm QQ - 每一天，乐在沟通</h1>
-        <div class="love_content_img"></div>
+<div style="width: 100%">
+    <img style="width: 100%;height: 800px" src="../images/bg_4.jpg" alt="">
+</div>
+
+<div class="content">
+    <div class="header">
+        <h1>Every day, every little</h1>
+        <!--<span>Image Wall with jQuery and CSS3</span>-->
     </div>
+    <div class="iw_wrapper">
+        <ul class="iw_thumbs" id="iw_thumbs">
+            <li><img src="../images/my.jpg" data-img="../images/my.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a1.jpg" data-img="../javascripts/love/images/a1.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a2.jpg" data-img="../javascripts/love/images/a2.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a3.jpg" data-img="../javascripts/love/images/a3.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a4.jpg" data-img="../javascripts/love/images/a4.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a26.jpg" data-img="../javascripts/love/images/a26.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a6.jpg" data-img="../javascripts/love/images/a6.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a7.jpg" data-img="../javascripts/love/images/a7.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a8.jpg" data-img="../javascripts/love/images/a8.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a9.jpg" data-img="../javascripts/love/images/a9.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a10.jpg" data-img="../javascripts/love/images/a10.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a11.jpg" data-img="../javascripts/love/images/a11.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a12.jpg" data-img="../javascripts/love/images/a12.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a13.jpg" data-img="../javascripts/love/images/a13.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a14.jpg" data-img="../javascripts/love/images/a14.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a15.jpg" data-img="../javascripts/love/images/a15.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a16.jpg" data-img="../javascripts/love/images/a16.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a17.jpg" data-img="../javascripts/love/images/a17.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a18.jpg" data-img="../javascripts/love/images/a18.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../images/my.jpg" data-img="../images/my.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a1.jpg" data-img="../javascripts/love/images/a1.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a2.jpg" data-img="../javascripts/love/images/a2.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a3.jpg" data-img="../javascripts/love/images/a3.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a4.jpg" data-img="../javascripts/love/images/a4.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a26.jpg" data-img="../javascripts/love/images/a26.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a6.jpg" data-img="../javascripts/love/images/a6.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a7.jpg" data-img="../javascripts/love/images/a7.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a8.jpg" data-img="../javascripts/love/images/a8.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a9.jpg" data-img="../javascripts/love/images/a9.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a10.jpg" data-img="../javascripts/love/images/a10.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a11.jpg" data-img="../javascripts/love/images/a11.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a12.jpg" data-img="../javascripts/love/images/a12.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a13.jpg" data-img="../javascripts/love/images/a13.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a14.jpg" data-img="../javascripts/love/images/a14.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a15.jpg" data-img="../javascripts/love/images/a15.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a16.jpg" data-img="../javascripts/love/images/a16.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a17.jpg" data-img="../javascripts/love/images/a17.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+            <li><img src="../javascripts/love/images/a18.jpg" data-img="../javascripts/love/images/a18.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li>
+        </ul>
+    </div>
+    <div id="iw_ribbon" class="iw_ribbon">
+        <span class="iw_close"></span>
+        <span class="iw_zoom">Click thumb to zoom</span>
+    </div>
+
+    <div id="main">
+        <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(Chrome)或者火狐(Firefox)浏览器，或者其他游览器的最新版本。</div>
+        <div id="wrap">
+            <div id="text">
+                <div id="code"> <font color="#FF0000"> <span class="say">亲爱的叔叔,</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say"> 时间飞逝,转眼已至第二个七夕,宝宝很想念你</span><br>
+                        <span class="say">心中很激动,但也有一丝愧意</span><br>
+                        <span class="say"> </span><br>
+
+                        <span class="say">每一天，</span><br>
+                        <span class="say">我用眼睛欣赏你的美，鼻子闻你的气息，</span><br>
+                        <span class="say">耳朵听你的指示，嘴巴向你表达爱意，</span><br>
+                        <span class="say">手为你创造幸福，双腿陪你走完一生，</span><br>
+                        <span class="say">我会用心装着你一辈子，亲爱的，七夕快乐！ </span><br>
+
+                        <span class="say"> </span><br>
+                        <span class="say"> </span><br>
+
+                        <span class="say"><span class="space"></span>执子之手，与子偕老 -- 宝宝--</span> </font>
+                    </p>
+                </div>
+            </div>
+            <div id="clock-box"> <span class="STYLE1"></span><font color="#33CC00">Uncle</font> <span class="bg-warning" style="color:#FF7285;font-weight: bold">You are everything to me</span>
+                <div id="clock"></div>
+            </div>
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="../javascripts/love/js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="../javascripts/love/js/jquery.easing.1.3.js"></script>
+
+<!--<link type="text/css" rel="stylesheet" href="renxi/default.css">-->
+<!--<script type="text/javascript" src="renxi/jquery.min.js"></script>-->
+<script type="text/javascript" src="../javascripts/love/renxi/jscex.min.js"></script>
+<script type="text/javascript" src="../javascripts/love/renxi/jscex-parser.js"></script>
+<script type="text/javascript" src="../javascripts/love/renxi/jscex-jit.js"></script>
+<script type="text/javascript" src="../javascripts/love/renxi/jscex-builderbase.min.js"></script>
+<script type="text/javascript" src="../javascripts/love/renxi/jscex-async.min.js"></script>
+<script type="text/javascript" src="../javascripts/love/renxi/jscex-async-powerpack.min.js"></script>
+<script type="text/javascript" src="../javascripts/love/renxi/functions.js" charset="utf-8"></script>
+<script type="text/javascript" src="../javascripts/love/renxi/love.js" charset="utf-8"></script>
+<script type="text/javascript">
+    $(window).load(function(){
+        var $iw_thumbs			= $('#iw_thumbs'),
+            $iw_ribbon			= $('#iw_ribbon'),
+            $iw_ribbon_close	= $iw_ribbon.children('span.iw_close'),
+            $iw_ribbon_zoom		= $iw_ribbon.children('span.iw_zoom');
+
+        ImageWall	= (function() {
+            // window width and height
+            var w_dim,
+                // index of current image
+                current				= -1,
+                isRibbonShown		= false,
+                isFullMode			= false,
+                // ribbon / images animation settings
+                ribbonAnim			= {speed : 500, easing : 'easeOutExpo'},
+                imgAnim				= {speed : 400, easing : 'jswing'},
+                // init function : call masonry, calculate window dimentions, initialize some events
+                init				= function() {
+                    $iw_thumbs.imagesLoaded(function(){
+                        $iw_thumbs.masonry({
+                            isAnimated	: true
+                        });
+                    });
+                    getWindowsDim();
+                    initEventsHandler();
+                },
+                // calculate window dimentions
+                getWindowsDim		= function() {
+                    w_dim = {
+                        width	: $(window).width(),
+                        height	: $(window).height()
+                    };
+                    console.log(w_dim)
+                },
+                // initialize some events
+                initEventsHandler	= function() {
+
+                    // click on a image
+                    $iw_thumbs.delegate('li', 'click', function() {
+                        if($iw_ribbon.is(':animated')) return false;
+
+                        var $el = $(this);
+
+                        if($el.data('ribbon')) {
+                            showFullImage($el);
+                        }
+                        else if(!isRibbonShown) {
+                            isRibbonShown = true;
+
+                            $el.data('ribbon',true);
+
+                            // set the current
+                            current = $el.index();
+
+                            showRibbon($el);
+                        }
+                    });
+
+                    // click ribbon close
+                    $iw_ribbon_close.bind('click', closeRibbon);
+
+                    // on window resize we need to recalculate the window dimentions
+                    $(window).bind('resize', function() {
+                        getWindowsDim();
+                        if($iw_ribbon.is(':animated'))
+                            return false;
+                        closeRibbon();
+                    })
+                        .bind('scroll', function() {
+                            if($iw_ribbon.is(':animated'))
+                                return false;
+                            closeRibbon();
+                        });
+
+                },
+                showRibbon			= function($el) {
+                    var	$img	= $el.children('img'),
+                        $descrp	= $img.next();
+
+                    // fadeOut all the other images
+                    $iw_thumbs.children('li').not($el).animate({opacity : 0.2}, imgAnim.speed);
+
+                    // increase the image z-index, and set the height to 100px (default height)
+                    $img.css('z-index', 100)
+                        .data('originalHeight',$img.height())
+                        .stop()
+                        .animate({
+                            height 		: '400px' //控制点击弹出的图片大小
+                        }, imgAnim.speed, imgAnim.easing);
+
+                    // the ribbon will animate from the left or right
+                    // depending on the position of the image
+                    var ribbonCssParam 		= {
+                            top	: $el.offset().top - $(window).scrollTop() - 6 + 'px'
+                        },
+                        descriptionCssParam,
+                        dir;
+
+                    if( $el.offset().left < (w_dim.width / 2) ) {
+                        dir = 'left';
+                        ribbonCssParam.left 	= 0;
+                        ribbonCssParam.right 	= 'auto';
+                    }
+                    else {
+                        dir = 'right';
+                        ribbonCssParam.right 	= 0;
+                        ribbonCssParam.left 	= 'auto';
+                    }
+
+                    $iw_ribbon.css(ribbonCssParam)
+                        .show()
+                        .stop()
+                        .animate({width : '100%'}, ribbonAnim.speed, ribbonAnim.easing, function() {
+                            switch(dir) {
+                                case 'left' :
+                                    descriptionCssParam		= {
+                                        'left' 			: $img.outerWidth(true) + 'px',
+                                        'text-align' 	: 'left'
+                                    };
+                                    break;
+                                case 'right' :
+                                    descriptionCssParam		= {
+                                        'left' 			: '-200px',
+                                        'text-align' 	: 'right'
+                                    };
+                                    break;
+                            };
+                            $descrp.css(descriptionCssParam).fadeIn();
+                            // show close button and zoom
+                            $iw_ribbon_close.show();
+                            $iw_ribbon_zoom.show();
+                        });
+
+                },
+                // close the ribbon
+                // when in full mode slides in the middle of the page
+                // when not slides left
+                closeRibbon			= function() {
+                    isRibbonShown 	= false
+
+                    $iw_ribbon_close.hide();
+                    $iw_ribbon_zoom.hide();
+
+                    if(!isFullMode) {
+
+                        // current wall image
+                        var $el	 		= $iw_thumbs.children('li').eq(current);
+
+                        resetWall($el);
+
+                        // slide out ribbon
+                        $iw_ribbon.stop()
+                            .animate({width : '0%'}, ribbonAnim.speed, ribbonAnim.easing);
+
+                    }
+                    else {
+                        $iw_ribbon.stop().animate({
+                            opacity		: 0.8,
+                            height 		: '0px',
+                            marginTop	: w_dim.height/2 + 'px' // half of window height
+                        }, ribbonAnim.speed, function() {
+                            $iw_ribbon.css({
+                                'width'		: '0%',
+                                'height'	: '126px',
+                                'margin-top': '0px'
+                            }).children('img').remove();
+                        });
+
+                        isFullMode	= false;
+                    }
+                },
+                resetWall			= function($el) {
+                    var $img		= $el.children('img'),
+                        $descrp		= $img.next();
+
+                    $el.data('ribbon',false);
+
+                    // reset the image z-index and height
+                    $img.css('z-index',1).stop().animate({
+                        height 		: $img.data('originalHeight')
+                    }, imgAnim.speed,imgAnim.easing);
+
+                    // fadeOut the description
+                    $descrp.fadeOut();
+
+                    // fadeIn all the other images
+                    $iw_thumbs.children('li').not($el).animate({opacity : 1}, imgAnim.speed);
+                },
+                showFullImage		= function($el) {
+                    isFullMode	= true;
+
+                    $iw_ribbon_close.hide();
+
+                    var	$img	= $el.children('img'),
+                        large	= $img.data('img'),
+
+                        // add a loading image on top of the image
+                        $loading = $('<span class="iw_loading"></span>');
+
+                    $el.append($loading);
+
+                    // preload large image
+                    $('<img/>').load(function() {
+                        var $largeImage	= $(this);
+
+                        $loading.remove();
+
+                        $iw_ribbon_zoom.hide();
+
+                        resizeImage($largeImage);
+
+                        // reset the current image in the wall
+                        resetWall($el);
+
+                        // animate ribbon in and out
+                        $iw_ribbon.stop().animate({
+                            opacity		: 1,
+                            height 		: '0px',
+                            marginTop	: '63px' // half of ribbons height
+                        }, ribbonAnim.speed, function() {
+                            // add the large image to the DOM
+                            $iw_ribbon.prepend($largeImage);
+
+                            $iw_ribbon_close.show();
+
+                            $iw_ribbon.animate({
+                                height 		: '100%',
+                                marginTop	: '0px',
+                                top			: '0px'
+                            }, ribbonAnim.speed);
+                        });
+                    }).attr('src',large);
+
+                },
+                resizeImage			= function($image) {
+                    var widthMargin		= 100,
+                        heightMargin 	= 100,
+
+                        windowH      	= w_dim.height - heightMargin,
+                        windowW      	= w_dim.width - widthMargin,
+                        theImage     	= new Image();
+
+                    theImage.src     	= $image.attr("src");
+
+                    var imgwidth     	= theImage.width,
+                        imgheight    	= theImage.height;
+
+                    if((imgwidth > windowW) || (imgheight > windowH)) {
+                        if(imgwidth > imgheight) {
+                            var newwidth 	= windowW,
+                                ratio 		= imgwidth / windowW,
+                                newheight 	= imgheight / ratio;
+
+                            theImage.height = newheight;
+                            theImage.width	= newwidth;
+
+                            if(newheight > windowH) {
+                                var newnewheight 	= windowH,
+                                    newratio 		= newheight/windowH,
+                                    newnewwidth 	= newwidth/newratio;
+
+                                theImage.width 		= newnewwidth;
+                                theImage.height		= newnewheight;
+                            }
+                        }
+                        else {
+                            var newheight 	= windowH,
+                                ratio 		= imgheight / windowH,
+                                newwidth 	= imgwidth / ratio;
+
+                            theImage.height = newheight;
+                            theImage.width	= newwidth;
+
+                            if(newwidth > windowW) {
+                                var newnewwidth 	= windowW,
+                                    newratio 		= newwidth/windowW,
+                                    newnewheight 	= newheight/newratio;
+
+                                theImage.height 	= newnewheight;
+                                theImage.width		= newnewwidth;
+                            }
+                        }
+                    }
+
+                    $image.css({
+                        'width'			: theImage.width + 'px',
+                        'height'		: theImage.height + 'px',
+                        'margin-left'	: -theImage.width / 2 + 'px',
+                        'margin-top'	: -theImage.height / 2 + 'px'
+                    });
+                };
+
+            return {init : init};
+        })();
+
+        ImageWall.init();
+    });
+</script>
+
+<script>
+    $(function(){
+        var canvas = $('#canvas');
+
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;        }
+
+        var width = canvas.width();
+        var height = canvas.height();
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]]
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
+
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
+
+        canvas.click(function(e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0;
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function(e){
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
+
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
+
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
+
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
+
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
+
+            // 会有闪烁不得意这样做, (＞﹏＜)
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+//            canvas.css("background", "#fff");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
+
+        var jumpAnimate = eval(Jscex.compile("async", function () {
+            var ctx = tree.ctx;
+            while (true) {
+                tree.ctx.clearRect(0, 0, width, height);
+                tree.jump();
+                foot.draw();
+                $await(Jscex.Async.sleep(25));
+            }
+        }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+            var together = new Date();
+            together.setFullYear(2015,3 , 14); 			//时间年月日
+            together.setHours(16);						//小时
+            together.setMinutes(53);					//分钟
+            together.setSeconds(0);					//秒前一位
+            together.setMilliseconds(2);				//秒第二位
+
+            $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
+
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+
+            textAnimate().start();
+
+            $await(jumpAnimate());
+        }));
+
+        runAsync().start();
+    })
+</script>
 <%- include ../footer%>
 

@@ -1,0 +1,188 @@
+/*@import url('reset.css');*/
+/*body{*/
+	/*background:#f7f7f7 url(../images/pinstripe.gif) repeat top left;*/
+	/*color:#000;*/
+	/*font-family: Georgia, "Times New Roman",sans-serif;*/
+	/*font-size:12px;*/
+/*}*/
+/*a{*/
+	/*color:#000;*/
+	/*text-decoration:none;*/
+/*}*/
+.header h1{
+	margin: 10px 0 0 20px;
+	font-size: 75px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 1px #fff;
+	color: #ad4d4d;
+	font-family: 'Wire One', arial, serif;
+}
+.header span{
+	font-style:italic;
+	margin:-10px 0 10px 188px;
+	display:block;
+	color:#555;
+	text-shadow:1px 1px 1px #fff;
+}
+.iw_wrapper{
+	width:70%;
+	margin:30px auto 100px auto;
+	position:relative;
+}
+ul.iw_thumbs li{
+	float:left;
+	margin:5px;
+}
+ul.iw_thumbs li div{
+	position:absolute;
+	top:5px;
+	width:180px;
+	padding:0px 10px;
+	display:none;
+	color:#fff;
+	z-index:100;
+}
+ul.iw_thumbs li div h2{
+	font-family: 'Wire One', arial, serif;
+	font-size:38px;
+	text-transform:uppercase;
+	text-shadow:0px 0px 1px #fff;
+}
+ul.iw_thumbs li div p{
+	font-size:11px;
+	line-height:16px;
+	font-style:italic;
+}
+ul.iw_thumbs li:nth-child(1){
+	margin-left:50px;
+}
+ul.iw_thumbs li:nth-child(even){
+	margin-top:30px;
+}
+ul.iw_thumbs li:nth-child(3n){
+	margin-left:20px;
+}
+ul.iw_thumbs li img{
+	border:7px solid #fff;
+	cursor:pointer;
+	position:relative;
+	-moz-box-shadow:1px 1px 1px #aaa;
+	-webkit-box-shadow:1px 1px 1px #aaa;
+	box-shadow:1px 1px 1px #aaa;
+}
+ul.iw_thumbs li img:hover{
+	-moz-box-shadow:1px 1px 7px #777;
+	-webkit-box-shadow:1px 1px 7px #777;
+	box-shadow:1px 1px 7px #777;
+}
+ul.iw_thumbs li:nth-child(even) img{
+	height:60px;
+}
+ul.iw_thumbs li:nth-child(odd) img{
+	height:80px;
+}
+ul.iw_thumbs li:nth-child(5n) img{
+	height:120px;
+}
+ul.iw_thumbs li:nth-child(6n) img{
+	height:150px;
+}
+ul.iw_thumbs li:nth-child(7n) img{
+	height:100px;
+}
+.iw_ribbon{
+	position:fixed;
+	height:126px; /*first 126 then 0 to close and 100% to open (while top goes to 0) */
+	width:0px;/*first 0 then animate to 100%*/
+	left:0px;/*or right 0*/
+	top:0px; /*First, top of thumb, then animate to 0*/
+	background:#000;
+	opacity:0.8;
+	z-index:10;
+	overflow:hidden;
+	display:none;
+}
+.iw_close{
+	position:absolute;
+	top:10px;
+	right:10px;
+	background:#f0f0f0 url(../images/close.gif) no-repeat center center;
+	width:18px;
+	height:18px;
+	display:none;
+	cursor:pointer;
+}
+.iw_zoom{
+	color:white;
+	font-size:8px;
+	font-family:Arial, sans-serif;
+	text-transform:uppercase;
+	padding:14px;
+	display:none;
+	float:right;
+	margin-right:30px;
+}
+.iw_ribbon img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	border:7px solid #fff;
+}
+.iw_loading{
+	background: #fff url(../images/loader.gif) no-repeat center center;
+	width:28px;
+	height:28px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10000;
+	margin: -14px 0px 0px -14px;
+	opacity:0.8;
+}
+/* Footer Style */
+/*.footer{*/
+	/*position:fixed;*/
+	/*bottom:0px;*/
+	/*left:0px;*/
+	/*width:100%;*/
+	/*font-size:13px;*/
+	/*background:#000;*/
+	/*opacity:0.9;*/
+	/*height:20px;*/
+	/*padding-bottom:5px;*/
+	/*text-transform:uppercase;*/
+	/*font-family: 'PT Sans Narrow', Arial, sans-serif;*/
+	/*z-index:4;*/
+/*}*/
+/*.footer a{*/
+	/*padding:5px 10px;*/
+	/*letter-spacing:1px;*/
+	/*text-shadow:1px 1px 1px #000;*/
+	/*color:#ddd;*/
+	/*float:right;*/
+/*}*/
+/*.footer a:hover{*/
+	/*color:#fff;*/
+/*}*/
+/*.footer a span{*/
+	/*font-weight:bold;*/
+/*}*/
+/*.footer a.left{*/
+	/*float:left;*/
+/*}*/
+
+
+/*a {color:#fff;font-size:14px;}*/
+#main{width:100%;background-color: transparent;}
+#wrap{position:relative;margin:0 auto;width:1100px;height:680px;margin-top:10px;}
+#text{width:400px;height:425px;left:60px;top:80px;position:absolute;}
+#code{display:none;font-size:16px;}
+#clock-box {position:absolute;left:60px;top:550px;font-size:28px;display:none;}
+#clock-box a {font-size:28px;text-decoration:none;}
+#clock{margin-left:48px;}
+#clock .digit {font-size:64px;}
+#canvas{margin:0 auto;width:1100px;height:680px;}
+#error{margin:0 auto;text-align:center;margin-top:60px;display:none;}
+.hand{cursor:pointer;}
+.say{margin-left:5px;}
+.space{margin-right:150px;}
