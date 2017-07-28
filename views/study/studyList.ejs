@@ -1,29 +1,32 @@
 <%- include ../header%>
 <div class="content">
-    <div class="content_left">
-        <div class="container">
-            <div class="nav">
-                <p class="nav_p">最新文章</p>
-                <% if(!studyList.length){%>
-                <h1>您好！您浏览的区域暂时无内容</h1>
-                <% }else{%>
-                <ul class="nav_ul">
-                    <!--<li>-->
+    <div class="content_1200">
+        <div class="content_left">
+            <div class="container">
+                <div class="nav">
+                    <p class="nav_p">最新文章</p>
+                    <% if(!studyList.length){%>
+                    <h1>您好！您浏览的区域暂时无内容</h1>
+                    <% }else{%>
+                    <ul class="nav_ul">
+                        <!--<li>-->
                         <!--<span>2016年12月 2日 » </span>-->
                         <!--<a href="">User space 与 Kernel space</a>-->
-                    <!--</li>-->
-                    <% for(var i=0;i<studyList.length;i++){%>
-                    <li>
-                        <span><%= studyList[i].study_time%> » </span>
-                        <a href="/study/studyList_con?newsList_id=<%= studyList[i].id%>" ><%= studyList[i].study_title%></a>
-                    </li>
+                        <!--</li>-->
+                        <% for(var i=0;i<studyList.length;i++){%>
+                        <li>
+                            <span><%= studyList[i].study_time%> » </span>
+                            <a href="/study/studyList_con?newsList_id=<%= studyList[i].id%>" ><%= studyList[i].study_title%></a>
+                        </li>
+                        <%}%>
+                    </ul>
                     <%}%>
-                </ul>
-                <%}%>
+                </div>
             </div>
         </div>
+        <%- include ../contentRight%>
     </div>
-    <%- include ../contentRight%>
+
 </div>
 
 <%- include ../footer%>

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Mongolia</title>
+  <link rel="shortcut icon" href="../images/M.png">
   <link rel="stylesheet" href="../stylesheets/index.css">
   <link rel="stylesheet" href="../or/swiper/swiper-3.4.1.min.css">
   <style>
@@ -28,6 +29,21 @@
     .swiper-slide img{
       width: 100%;
       height: 100%;
+    }
+
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color:    #6CFFE4;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    #6CFFE4;
+      opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    #6CFFE4;
+      opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color:    #6CFFE4;
     }
   </style>
 </head>
@@ -62,15 +78,15 @@
         <h1>Mongoliazhi个人网站</h1>
         <p>For uncle, for Aunt</p>
       </div>
-      <form class="home" action="">
-        <input class="home_input" type="text" name="">
-        <button class="home_btn" type="submit">搜索</button>
-      </form>
+      <div class="home">
+        <input class="home_input" type="text" placeholder="" name="">
+        <button class="home_btn">搜索</button>
+      </div>
     </div>
     <div class="home_keyword">
-      <span><a href="#">React</a><i>/</i></span>
-      <span><a href="#">Angular</a><i>/</i></span>
-      <span><a href="#">NodeJs</a></span>
+      <span><a href="/study/studyList?val=react">React</a><i>/</i></span>
+      <span><a href="/study/studyList?val=vue">Vue</a><i>/</i></span>
+      <span><a href="/study/studyList?val=node">NodeJs</a></span>
     </div>
   </div>
   <div class="header_right">
@@ -102,18 +118,6 @@
 //        swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
 //      },
     })
-//            背景轮播
-//    var str=["bg1","bg2","bg3"]
-//    var strNum=0;
-//    setInterval(function(){
-////      console.log(strNum);
-//      if(strNum<str.length){
-//        $("body").css("backgroundImage","url('../images/"+str[strNum]+".jpg')");
-//        strNum++;
-//      }else {
-//        strNum=0;
-//      }
-//    },5000)
 
 //            右导航栏
     $(".header_img2").click(function(event){
@@ -130,6 +134,28 @@
     $(".header_right").click(function(event){
       event.stopPropagation();
     })
+
+
+    $(".home_btn").click(function () {
+        if($(".home_input").val()==""){
+            $(".home_input").attr("placeholder","请输入您要搜索的内容");
+        }else{
+            let word = $(".home_input").val();
+            window.location.href="/study/studyList?val="+word;
+        }
+    })
+     
+     function Keyword(val) {
+        $.ajax({
+            type: 'POST',
+            url: "/Keyword",
+            data:"val="+val,
+            success: function(data){
+                console.log(data)
+                window.location.href="/study/studyList"
+            }
+        })
+     } 
   })
 </script>
 </body>
